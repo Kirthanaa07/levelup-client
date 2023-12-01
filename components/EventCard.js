@@ -12,9 +12,9 @@ const EventCard = ({
   <Card className="text-center">
     <Card.Header>{description}</Card.Header>
     <Card.Body>
-      <Card.Title>By: {organizer}</Card.Title>
-      <Card.Title>When: {date} at {time}</Card.Title>
-      <Card.Text>Game: {game}</Card.Text>
+      <Card.Title>{game}</Card.Title>
+      <Card.Text>When: {date} at {time}</Card.Text>
+      <Card.Text>By:{organizer}</Card.Text>
     </Card.Body>
   </Card>
 );

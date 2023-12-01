@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import router from 'next/router';
 import { signIn } from '../utils/auth';
 
 function Signin() {
@@ -19,7 +20,16 @@ function Signin() {
     >
       <h1>Hi there!</h1>
       <p>Click the button below to login!</p>
-      <Button type="button" size="lg" className="copy-btn" onClick={signIn}>
+      <Button
+        type="button"
+        size="sm"
+        variant="light"
+        className="copy-btn"
+        onClick={() => {
+          signIn(router);
+        }}
+        style={{ cursor: 'pointer' }}
+      >
         Sign In
       </Button>
     </div>
